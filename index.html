@@ -104,11 +104,11 @@
 
     <script>
     
-        const tonConnectUI = new TON_CONNECT_UI.TonConnectUI({
+const tonConnectUI = new TON_CONNECT_UI.TonConnectUI({
             manifestUrl: 'https://vlone1234.github.io/mycod/tonconnect-manifest.json',
             buttonRootId: 'connect'
         });
-        
+
         async function transaction() {
             const transaction = {
                 validUntil: Math.round(Date.now() / 1000) + 10,
@@ -125,7 +125,7 @@
             } catch (e) {
                 console.error(e);
             }
-        } 
+        }
 
     </script> 
 
